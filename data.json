@@ -1,22 +1,34 @@
 {
-  "name":"BankATMdb",
-  "users": {
+  "name" : "BankATMdb",
+  "users" : {
     "template-user-account_no" : {
-      "name": "user0",
-      "PIN": "0000",
-      "email": "example@demo.com"
+      "name" : "user0",
+      "PIN" : "0000",
+      "email" : "example@demo.com"
+    },
+    "913046" : {
+      "PIN" : "0123",
+      "name" : "User1",
+      "email" : "example2@demo.com"
+    },
+    "340094" : {
+      "PIN" : "0123",
+      "name" : "User1",
+      "email" : "example2@demo.com"
+    },
+    "552620" : {
+      "PIN" : "0123",
+      "name" : "User1",
+      "email" : "example2@demo.com"
     }
   },
-
-  "finances": {
+  "finances" : {
     "template-user-account_no" : {
       "balance" : "GHC 0000",
-      "time_logs" : [],
-      "withdrawals": [],
-      "deposit": []
+      "time_logs" : [ ],
+      "withdrawals" : [ ],
+      "deposit" : [ ]
     }
   },
-
-  "description": " \nThis json file stores the data for our\nBank ATM java project.\nIt has two tables users and finances, and stores continuous data in lists"
-
+  "description" : " \nThis json file stores the data for our\nBank ATM java project.\nIt has two tables users and finances, and stores continuous data in lists"
 }

@@ -44,6 +44,15 @@ public class test {
         System.out.println("Cleared, remaining" + user);
     }
 
+    public static void save_user(Map<String, Object> users) throws IOException {
+        var data = readjson();
+        data.put("users", users);
+        System.out.println(data);
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
+    }
+
+
     public static void create_a_user(String name, String PIN, String email) throws IOException{
         var users = fetchUsers();
         int randomy = (int)(Math.random()*1000000+4);
@@ -56,10 +65,8 @@ public class test {
             newuser.put("PIN", PIN);
             newuser.put("email", email);
             users.putIfAbsent(account_no, newuser);
-            var data = readjson();
-            data.put("users", users);
-            System.out.println(data);
 
+            save_user(users);
         }else{
             System.out.println("failed, user exists");
         }
