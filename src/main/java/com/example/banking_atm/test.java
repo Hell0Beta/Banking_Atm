@@ -52,7 +52,6 @@ public class test {
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
     }
 
-
     public static void create_a_user(String name, String PIN, String email) throws IOException{
         var users = fetchUsers();
         int randomy = (int)(Math.random()*1000000+4);
@@ -74,7 +73,7 @@ public class test {
 
     public static void main(String[] args) throws IOException {
         System.out.println('i');
-        create_a_user("User1", "0123", "example2@demo.com");
+        delete_a_user("552620");
 
     }
 }

@@ -9,7 +9,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Map;
 
+// HOW TO PUSH YOUR COMMIT
 
+// THESE ARE CHANGES AND THEREFORE CAN BE COMITED
 import java.io.File;
 
 public class HelloApplication extends Application {
