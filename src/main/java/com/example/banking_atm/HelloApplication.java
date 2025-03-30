@@ -9,9 +9,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Map;
 
-// HOW TO PUSH YOUR COMMIT
+// HOW TO COMMIT TO GIT THEN PUSH TO GITHUB
 
-// THESE ARE CHANGES AND THEREFORE CAN BE COMITED
 import java.io.File;
 
 public class HelloApplication extends Application {
