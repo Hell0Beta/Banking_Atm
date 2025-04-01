@@ -52,6 +52,22 @@ public class test {
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
     }
 
+    public static boolean edit_user(String account_no, String newName, String newPIN, String newEmail) throws IOException {
+        Map<String, Object> users = fetchUsers();
+        if (!users.containsKey(account_no)) {
+            System.out.println("User not found");
+            return false ;
+        }
+        Map<String, Object> user = (Map<String, Object>) users.get(account_no);
+        if (newName != null && !newName.isEmpty()) {user.put("name", newName);}
+        if (newPIN != null && !newPIN.isEmpty()) {user.put("PIN", newPIN);}
+        if (newEmail != null && !newEmail.isEmpty()) {user.put("email", newEmail);}
+
+        save_user(users);
+        System.out.println("User Updated Successfully");
+        return true;
+    }
+
     public static void create_a_user(String name, String PIN, String email) throws IOException{
         var users = fetchUsers();
         int randomy = (int)(Math.random()*1000000+4);
@@ -74,6 +90,17 @@ public class test {
     public static void main(String[] args) throws IOException {
         System.out.println('i');
         delete_a_user("552620");
+
+        boolean result = edit_user("340094", "User 2", "1256","user2email@example.com");
+        if (result) {
+            Map<String, Object> users = fetchUsers();
+            Map<String, Object> user = (Map<String, Object>) users.get("340094");
+            System.out.println("Updated User: " + user);
+
+        }
+        else{
+            System.out.println("failed");
+        }
 
     }
 }
