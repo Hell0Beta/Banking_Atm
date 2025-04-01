@@ -41,7 +41,7 @@
         </Pane>
         <Pane prefHeight="186.0" prefWidth="207.0">
          <children>
-                <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="6.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="6.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../images/whale1.jpg" />
                     </image>

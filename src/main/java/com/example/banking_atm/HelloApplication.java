@@ -9,10 +9,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Map;
 
-// HOW TO COMMIT TO GIT THEN PUSH TO GITHUB
-// This is my change
-
-// now if u chose commit instead of commit and push
 
 import java.io.File;
 // Now our code has been push to git lets push to github

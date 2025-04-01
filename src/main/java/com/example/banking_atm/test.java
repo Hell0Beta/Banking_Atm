@@ -96,7 +96,6 @@ public class test {
             Map<String, Object> users = fetchUsers();
             Map<String, Object> user = (Map<String, Object>) users.get("340094");
             System.out.println("Updated User: " + user);
-
         }
         else{
             System.out.println("failed");
