@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.loginController">
+    <children>
+        <Pane layoutX="-1.0" layoutY="303.0" prefHeight="257.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF;" />
+        <Pane layoutX="217.0" layoutY="9.0" prefHeight="543.0" prefWidth="386.0" style="-fx-background-color: #FFFFFF;">
+            <children>
+                <ImageView fitHeight="108.0" fitWidth="122.0" layoutX="185.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/lock2.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="75.0" layoutY="137.0" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #FFFFFF;" text="Username" />
+                <TextField layoutX="144.0" layoutY="139.0" prefHeight="27.0" prefWidth="193.0" style="-fx-border-color: #000000;" />
+                <ImageView fitHeight="32.0" fitWidth="51.0" layoutX="19.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/user.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="59.0" layoutY="223.0" prefHeight="17.0" prefWidth="83.0" text="Password" />
+                <PasswordField layoutX="144.0" layoutY="218.0" prefHeight="27.0" prefWidth="193.0" style="-fx-border-color: #000000;" />
+                <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="9.0" layoutY="203.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../../../images/pin1.jpg" />
+                    </image>
+                </ImageView>
+                <Button layoutX="161.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #000000;" text="Log-in" textFill="WHITE" />
+                <Button layoutX="250.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Forgot Password?" />
+                <Button layoutX="5.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Sign-in" />
+                <Button layoutX="161.0" layoutY="319.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #000000;" text="Back to Dashbord" textFill="WHITE" />
+            </children>
+        </Pane>
+        <Pane prefHeight="186.0" prefWidth="207.0">
+         <children>
+                <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="6.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/whale1.jpg" />
+                    </image>
+                </ImageView>
+         </children>
+        </Pane>
+          <ImageView fitHeight="375.0" fitWidth="215.0" layoutX="-238.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../../../images/companies.jpg" />
+              </image>
+          </ImageView>
+    </children>
+</AnchorPane>
