@@ -7,10 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Map;
 
-
-import java.io.File;
 // Now our code has been push to git lets push to github
 public class HelloApplication extends Application {
 
