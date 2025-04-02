@@ -1,10 +1,10 @@
 package com.example.banking_atm;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class loginController {
 
@@ -24,18 +24,18 @@ public class loginController {
     private TextField username;
 
     @FXML
-    void onForgot(ActionEvent event) {
-
+    void onForgot(MouseEvent event) {
+        System.out.println("lolo");
     }
 
     @FXML
-    void onLogin(ActionEvent event) {
-        System.out.println("lplp");
+    void onLogin(MouseEvent event) {
+        System.out.println("llp");
     }
 
     @FXML
-    void onSignup(ActionEvent event) {
-
+    void onSignup(MouseEvent event) {
+        System.out.printf("lppl");
     }
 
 }

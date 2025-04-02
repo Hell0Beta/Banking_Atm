@@ -13,12 +13,8 @@ public class test {
 //      This line creates a ObjectMapper object - This allows us to convert a json object to a hash map
         ObjectMapper objectMapper = new ObjectMapper();
 
-
 //      hashmap(key:str,val:Obj) var  objectmapper reads value from ----the---`data.json` file, further specifies its a hash map
         Map<String, Object> data = objectMapper.readValue(new File("data.json"), Map.class) ;
-
-//      Prints info to console
-        System.out.println("Read JSON: " + data + "\n");
 
         return data;
     }
@@ -27,27 +23,29 @@ public class test {
         var data = readjson();
         var userobj = data.get("users");
         Map<String, Object> users = new LinkedHashMap<>((Map<? extends String, ?>) userobj);
-        System.out.println(users);
         return users;
     }
 
     public static Map<String, Object> fetch_a_user(String account_no) throws IOException {
         var users = fetchUsers();
         Map<String, Object> user = new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
-        System.out.println("user data for - template-user-account_no:\n" + user);
         return user;
     }
 
     public static void delete_a_user(String account_no) throws IOException {
-        var user = fetch_a_user(account_no);
-        user.clear();
-        System.out.println("Cleared, remaining" + user);
+        var users = fetchUsers();
+        if(users.containsKey(account_no)){
+            users.remove(account_no);
+            save_user(users);
+        }else{
+            System.out.println("User doesn't exist\n");
+        }
+        System.out.println("Cleared, remaining" + users + "\n");
     }
 
     public static void save_user(Map<String, Object> users) throws IOException {
         var data = readjson();
         data.put("users", users);
-        System.out.println(data);
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
     }
@@ -82,6 +80,7 @@ public class test {
             users.putIfAbsent(account_no, newuser);
 
             save_user(users);
+            System.out.println("Successful");
         }else{
             System.out.println("failed, user exists");
         }
@@ -89,9 +88,8 @@ public class test {
 
     public static void main(String[] args) throws IOException {
         System.out.println('i');
-        delete_a_user("552620");
 
-        boolean result = edit_user("340094", "User 2", "1256","user2email@example.com");
+        boolean result = edit_user("340094", "User 2", "1253","user2email@example.com");
         if (result) {
             Map<String, Object> users = fetchUsers();
             Map<String, Object> user = (Map<String, Object>) users.get("340094");

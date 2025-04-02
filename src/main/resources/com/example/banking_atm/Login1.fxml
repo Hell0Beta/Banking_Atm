@@ -17,12 +17,12 @@
             <children>
                 <TextField fx:id="username" layoutX="76.0" layoutY="141.0" prefHeight="39.0" prefWidth="275.0" promptText="Username" style="-fx-border-color: #000000; -fx-border-radius: 5px;" />
                 <PasswordField fx:id="password" layoutX="76.0" layoutY="206.0" prefHeight="39.0" prefWidth="275.0" promptText="Password" style="-fx-border-color: #000000; -fx-border-radius: 5px;" />
-                <Button fx:id="login" layoutX="76.0" layoutY="289.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="38.0" prefWidth="275.0" style="-fx-background-color: #000000; -fx-border-radius: 5px;" styleClass="login:hover" text="Log-in" textFill="WHITE">
+                <Button fx:id="login" layoutX="76.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#onLogin" prefHeight="38.0" prefWidth="275.0" style="-fx-background-color: #000000; -fx-border-radius: 5px;" styleClass="login:hover" text="Log-in" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-                <Button fx:id="forgotpswrdbtn" layoutX="242.0" layoutY="245.0" mnemonicParsing="false" onAction="#onForgot" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #FFFFFF;" text="Forgot Password?" />
-                <Button fx:id="signup" layoutX="103.0" layoutY="370.0" mnemonicParsing="false" onAction="#onSignup" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 3px;" text="Don't have an account? Sign Up" textFill="#000000d9" />
+                <Button fx:id="forgotpswrdbtn" layoutX="242.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#onForgot" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #FFFFFF;" text="Forgot Password?" />
+                <Button fx:id="signup" layoutX="103.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#onSignup" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 3px;" text="Don't have an account? Sign Up" textFill="#000000d9" />
             <Label layoutX="118.0" layoutY="72.0" text="Welcome back!">
                <font>
                   <Font name="System Bold Italic" size="25.0" />

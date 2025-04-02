@@ -12,14 +12,9 @@
       "email" : "example2@demo.com"
     },
     "340094" : {
-      "PIN" : "1256",
+      "PIN" : "1253",
       "name" : "User 2",
       "email" : "user2email@example.com"
-    },
-    "552620" : {
-      "PIN" : "0123",
-      "name" : "User1",
-      "email" : "example2@demo.com"
     }
   },
   "finances" : {
