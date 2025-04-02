@@ -4,27 +4,48 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="365.0" prefWidth="397.0" style="-fx-background-radius: 20" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.ForgotPin">
+<AnchorPane prefHeight="474.0" prefWidth="603.0" style="-fx-background-radius: 20" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.ForgotPin">
     <children>
-        <Label layoutX="139.0" layoutY="69.0" prefHeight="30.0" prefWidth="118.0" text="Forgot PIN">
-            <font>
-                <Font name="System Bold" size="20.0" />
-            </font>
-        </Label>
-        <Label layoutX="49.0" layoutY="110.0" prefHeight="35.0" prefWidth="315.0" text="Enter your email or phone number to reset your pin">
-            <font>
-                <Font name="System Italic" size="12.0" />
-            </font>
-        </Label>
-        <TextField layoutX="43.0" layoutY="151.0" prefHeight="35.0" prefWidth="302.0" promptText="Enter Email or Phone Number" />
-        <Button layoutX="43.0" layoutY="215.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color:#000000;" text="Reset PIN" textFill="WHITE" />
-        <Hyperlink layoutX="158.0" layoutY="272.0" prefHeight="24.0" prefWidth="118.0" style="-fx-text-fill: #000000" text="&lt;- Back to login">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Hyperlink>
+      <Pane layoutX="141.0" layoutY="104.0">
+         <children>
+              <Label layoutX="100.0" layoutY="35.0" prefHeight="30.0" prefWidth="118.0" text="Forgot PIN">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Label>
+              <Label layoutX="3.0" layoutY="65.0" prefHeight="35.0" prefWidth="315.0" text="Enter your email or phone number to reset your pin">
+                  <font>
+                      <Font name="System Italic" size="12.0" />
+                  </font>
+              </Label>
+              <TextField layoutX="4.0" layoutY="114.0" prefHeight="35.0" prefWidth="302.0" promptText="Enter Email or Phone Number" />
+              <Button layoutX="4.0" layoutY="177.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color:#000000;" text="Reset PIN" textFill="WHITE" />
+              <Hyperlink layoutX="115.0" layoutY="203.0" prefHeight="24.0" prefWidth="118.0" style="-fx-text-fill: #000000" text="&lt;- Back to login">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+              </Hyperlink>
+         </children>
+      </Pane>
+      <Pane layoutY="4.0" prefHeight="78.0" prefWidth="280.0">
+         <children>
+            <Label layoutX="76.0" layoutY="9.0" prefHeight="30.0" prefWidth="118.0" text="Forgot PIN">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="67.0">
+               <image>
+                  <Image url="@../../../images/whale1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
