@@ -6,6 +6,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 public class loginController {
 
     @FXML
@@ -29,9 +33,17 @@ public class loginController {
     }
 
     @FXML
-    void onLogin(MouseEvent event) {
-        System.out.println("llp");
+    void onLogin(MouseEvent event) throws IOException {
+        var userinfo = username.getText();
+        var pass = password.getText();
+        if(test.nameExists(userinfo)){
+            System.out.println("Authenticated \n: Loading next page");
+        }
+        System.out.println(userinfo);
     }
+
+
+
 
     @FXML
     void onSignup(MouseEvent event) {

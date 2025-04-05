@@ -31,6 +31,25 @@ public class test {
         Map<String, Object> user = new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
         return user;
     }
+    private static String fetchuserKey(String userinfo) throws IOException {
+        var users = fetchUsers();
+        for (Map.Entry<String, Object> entry : users.entrySet()) {
+
+            HashMap<String, Object> innerMap = (HashMap<String, Object>) entry.getValue();
+            for (Map.Entry<String, Object> innerEntry : innerMap.entrySet()) {
+//                System.out.println("  Inner Key: " + innerEntry.getKey() + ", Value: " + innerEntry.getValue());
+                if (innerEntry.getKey().equals("name")) {
+                    if (innerEntry.getValue().equals(userinfo)) {
+                        System.out.println("User Exists");
+                        System.out.println("Key: " + entry.getKey());
+                        System.out.println(innerEntry.getValue());
+                        return entry.getKey();
+                    }
+                }
+            }
+        }
+        return "doesn't exists";
+    }
 
     public static void delete_a_user(String account_no) throws IOException {
         var users = fetchUsers();
@@ -48,6 +67,50 @@ public class test {
         data.put("users", users);
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
+    }
+
+//    checks if name exists in users table
+    static boolean nameExists(String userinfo) throws IOException {
+        var users = test.fetchUsers();
+        for (Map.Entry<String, Object> entry : users.entrySet()) {
+            HashMap<String, Object> innerMap = (HashMap<String, Object>) entry.getValue();
+            for (Map.Entry<String, Object> innerEntry : innerMap.entrySet()) {
+//                System.out.println("  Inner Key: " + innerEntry.getKey() + ", Value: " + innerEntry.getValue());
+                if (innerEntry.getKey().equals("name")){
+                    if (innerEntry.getValue().equals(userinfo)){
+                        System.out.println("User Exists");
+                        System.out.println(innerEntry.getValue());
+                        return true;
+                    }
+                    else {
+                        System.out.println("Error........");
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+//    checks for any given data exists in any given column
+    static boolean dataUserExists(String column, String userinfo) throws IOException {
+        var users = test.fetchUsers();
+        for (Map.Entry<String, Object> entry : users.entrySet()) {
+            HashMap<String, Object> innerMap = (HashMap<String, Object>) entry.getValue();
+            for (Map.Entry<String, Object> innerEntry : innerMap.entrySet()) {
+//                System.out.println("  Inner Key: " + innerEntry.getKey() + ", Value: " + innerEntry.getValue());
+                if (innerEntry.getKey().equals(column)){
+                    if (innerEntry.getValue().equals(userinfo)){
+                        System.out.println("User Exists");
+                        System.out.println(innerEntry.getValue());
+                        return true;
+                    }
+                    else {
+                        System.out.println("Error........");
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     public static boolean edit_user(String account_no, String newName, String newPIN, String newEmail) throws IOException {
