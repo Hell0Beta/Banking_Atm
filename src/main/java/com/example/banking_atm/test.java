@@ -96,6 +96,7 @@ public class test {
             for (Map.Entry<String, Object> innerEntry : innerMap.entrySet()) {
 //                System.out.println("  Inner Key: " + innerEntry.getKey() + ", Value: " + innerEntry.getValue());
                 if (innerEntry.getKey().equals(column)){
+
                     if (innerEntry.getValue().equals(userinfo)){
                         System.out.println("User Exists");
                         System.out.println(innerEntry.getValue());

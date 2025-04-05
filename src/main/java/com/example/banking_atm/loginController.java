@@ -52,7 +52,7 @@ public class loginController {
 
     @FXML
     void onSignup(MouseEvent event) {
-        System.out.printf("SignUp Clicked, loading `coming_soon.fxml`");
+        System.out.printf("SignUp Clicked, loading `Signup_coming_soon.fxml`");
     }
 
 
