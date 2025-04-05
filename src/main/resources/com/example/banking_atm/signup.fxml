@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="387.0" layoutY="224.0" prefHeight="43.0" prefWidth="250.0" promptText="Fullname" style="-fx-border-color: BLACK;">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="387.0" layoutY="297.0" prefHeight="43.0" prefWidth="250.0" promptText="ACCOUNT NUMBER" style="-fx-border-color: BLACK;">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="402.0" layoutY="468.0" prefHeight="37.0" prefWidth="235.0" promptText="PIN" style="-fx-border-color: BLACK;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="387.0" layoutY="377.0" prefHeight="37.0" prefWidth="250.0" promptText="EMAIL" style="-fx-border-color: BLACK;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ButtonBar layoutX="346.0" layoutY="415.0" prefHeight="40.0" prefWidth="74.0" />
+      <ButtonBar layoutX="484.0" layoutY="415.0" prefHeight="40.0" prefWidth="93.0" />
+      <Label layoutX="364.0" layoutY="108.0" prefHeight="61.0" prefWidth="295.0" text="Please fill in with your credentials">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="192.0" fitWidth="196.0" layoutX="32.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/whale1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="314.0" layoutY="226.0" prefHeight="40.0" prefWidth="63.0" text="Username">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="297.0" prefHeight="43.0" prefWidth="63.0" text="Account">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="472.0" prefHeight="29.0" prefWidth="75.0" text="Password">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="368.0" prefHeight="37.0" prefWidth="63.0" text="Email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="31.0" layoutX="239.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="37.0" fitWidth="31.0" layoutX="282.0" layoutY="227.0">
+         <image>
+            <Image url="@Images/user.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="63.0" layoutX="276.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/pin1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="31.0" layoutX="282.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/lock2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="396.0" fitWidth="250.0" layoutX="5.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/companies.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="276.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/YY.jpg" />
+         </image>
+      </ImageView>
+    <Button layoutX="420.0" layoutY="569.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="Signup" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+    <Button layoutX="546.0" layoutY="567.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="Sign-in" textFill="#efebeb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>
