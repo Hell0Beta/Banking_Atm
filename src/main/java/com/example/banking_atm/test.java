@@ -31,18 +31,15 @@ public class test {
         Map<String, Object> user = new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
         return user;
     }
-    private static String fetchuserKey(String userinfo) throws IOException {
+    public static String fetchuserKey(String userinfo) throws IOException {
         var users = fetchUsers();
         for (Map.Entry<String, Object> entry : users.entrySet()) {
-
             HashMap<String, Object> innerMap = (HashMap<String, Object>) entry.getValue();
             for (Map.Entry<String, Object> innerEntry : innerMap.entrySet()) {
 //                System.out.println("  Inner Key: " + innerEntry.getKey() + ", Value: " + innerEntry.getValue());
                 if (innerEntry.getKey().equals("name")) {
                     if (innerEntry.getValue().equals(userinfo)) {
                         System.out.println("User Exists");
-                        System.out.println("Key: " + entry.getKey());
-                        System.out.println(innerEntry.getValue());
                         return entry.getKey();
                     }
                 }

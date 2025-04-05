@@ -36,13 +36,22 @@ public class loginController {
     void onLogin(MouseEvent event) throws IOException {
         var userinfo = username.getText();
         var pass = password.getText();
-        if(test.nameExists(userinfo)){
+        if(authenticate(userinfo, pass)){
             System.out.println("Authenticated \n: Loading next page");
         }
         System.out.println(userinfo);
     }
 
-
+    private static boolean authenticate(String userinfo, String pass) throws IOException {
+        if(test.nameExists(userinfo)){
+            var key = test.fetchuserKey(userinfo);
+            var user = test.fetch_a_user(key);
+            if(user.get("PIN").equals(pass)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     @FXML
