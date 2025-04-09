@@ -23,6 +23,18 @@
       "time_logs" : [ ],
       "withdrawals" : [ ],
       "deposit" : [ ]
+    },
+    "913046" : {
+      "balance" : "GHC 0000",
+      "deposit" : [ ],
+      "time_logs" : [ ],
+      "withdrawals" : [ ]
+    },
+    "340094" : {
+      "balance" : "GHC 0000",
+      "deposit" : [ ],
+      "time_logs" : [ ],
+      "withdrawals" : [ ]
     }
   },
   "description" : " \nThis json file stores the data for our\nBank ATM java project.\nIt has two tables users and finances, and stores continuous data in lists"

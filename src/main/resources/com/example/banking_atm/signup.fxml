@@ -10,25 +10,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.SignupController">
    <children>
-      <TextField layoutX="387.0" layoutY="224.0" prefHeight="43.0" prefWidth="250.0" promptText="Fullname" style="-fx-border-color: BLACK;">
+      <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="279.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/lock2.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="fullname" layoutX="389.0" layoutY="228.0" prefHeight="37.0" prefWidth="250.0" promptText="Fullname" style="-fx-border-color: BLACK;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="387.0" layoutY="297.0" prefHeight="43.0" prefWidth="250.0" promptText="ACCOUNT NUMBER" style="-fx-border-color: BLACK;">
-         <font>
-            <Font name="Times New Roman" size="14.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="402.0" layoutY="468.0" prefHeight="37.0" prefWidth="235.0" promptText="PIN" style="-fx-border-color: BLACK;">
+      <TextField fx:id="pin" layoutX="389.0" layoutY="372.0" prefHeight="37.0" prefWidth="250.0" promptText="PIN" style="-fx-border-color: BLACK;">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="387.0" layoutY="377.0" prefHeight="37.0" prefWidth="250.0" promptText="EMAIL" style="-fx-border-color: BLACK;">
+      <TextField fx:id="email" layoutX="389.0" layoutY="299.0" prefHeight="37.0" prefWidth="250.0" promptText="EMAIL" style="-fx-border-color: BLACK;">
          <font>
             <Font size="14.0" />
          </font>
@@ -40,7 +39,7 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="192.0" fitWidth="196.0" layoutX="32.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="68.0" fitWidth="74.0" layoutX="-3.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/whale1.jpg" />
          </image>
@@ -50,17 +49,12 @@
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="317.0" layoutY="297.0" prefHeight="43.0" prefWidth="63.0" text="Account">
-         <font>
-            <Font name="Times New Roman" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="320.0" layoutY="472.0" prefHeight="29.0" prefWidth="75.0" text="Password">
+      <Label layoutX="309.0" layoutY="375.0" prefHeight="29.0" prefWidth="75.0" text="Password">
          <font>
             <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="335.0" layoutY="368.0" prefHeight="37.0" prefWidth="63.0" text="Email">
+      <Label layoutX="326.0" layoutY="301.0" prefHeight="37.0" prefWidth="63.0" text="Email">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -71,22 +65,12 @@
             <Image url="@Images/user.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="29.0" fitWidth="63.0" layoutX="276.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/pin1.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="31.0" layoutX="282.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/lock2.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="396.0" fitWidth="250.0" layoutX="5.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="396.0" fitWidth="250.0" layoutX="14.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/companies.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="276.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="282.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/YY.jpg" />
          </image>
@@ -101,6 +85,21 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <ImageView fitHeight="50.0" fitWidth="31.0" layoutX="282.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/lock2.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="confin" layoutX="389.0" layoutY="429.0" prefHeight="37.0" prefWidth="250.0" promptText="PIN" style="-fx-border-color: BLACK;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="309.0" layoutY="432.0" prefHeight="29.0" prefWidth="75.0" text="Password">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
    <effect>
       <Blend />

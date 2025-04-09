@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
+import java.io.IOException;
+
 public class SignupController {
 
     @FXML
@@ -22,8 +24,10 @@ public class SignupController {
     private Button signupButton;
 
     @FXML
-    void handleSignin(ActionEvent event) {
-
+    void handleSignin(ActionEvent event) throws IOException {
+        System.out.println("BackToLogin was clicked");
+        HelloApplication.closeStageContaining(signinButton);
+        HelloApplication.displaypage("Login1.fxml");
     }
 
     @FXML

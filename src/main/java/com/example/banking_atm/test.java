@@ -3,9 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jdk.jshell.spi.ExecutionControl;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.io.File;
 public class test {
     public static Map<String, Object> readjson() throws IOException{
@@ -163,12 +161,49 @@ public class test {
             return finance;
         }
 
-        public static void delete_a_finance(String account_no) {
+        public static void save_finances(Map<String, Object> finances) throws IOException {
+            var data = readjson();
+            data.put("finances", finances);
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File("data.json"),data);
+        }
+
+        public static void delete_a_finance(String account_no) throws IOException {
+            var finances = fetchFinances();
+            if(finances.containsKey(account_no)){
+                finances.remove(account_no);
+                save_finances(finances);
+            }
+            else{
+                System.out.println("Datapoint doesn't exist\n");
+            }
+            System.out.println("Cleared, remaining" + finances + "\n");
+
+        }
+        public static void create_a_finance(String account_no) throws IOException {
+            var finances = fetchFinances();
+            if(!finances.containsKey(account_no)){
+                Map<String, Object> newfinance = new HashMap<>();
+                newfinance.put("balance", "GHC 0000");
+                newfinance.put("time_logs", new ArrayList<>());
+                newfinance.put("withdrawals", new ArrayList<>());
+                newfinance.put("deposit", new ArrayList<>());
+                finances.putIfAbsent(account_no, newfinance);
+                System.out.println(finances);
+                save_finances(finances);
+            }
+
+        }
+        public static void create_a_finance(String account_no,String balance){
+
+        }
+        public static void create_a_finance(String account_no,String balance, String time_logs, String withdrawals){
 
         }
     }
     public static void main(String[] args) throws IOException {
         System.out.println("j");
         FinancesTable.fetch_a_finance("template-user-account_no");
+        FinancesTable.create_a_finance("340094");
     }
 }
