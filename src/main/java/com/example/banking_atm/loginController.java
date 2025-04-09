@@ -44,8 +44,11 @@ public class loginController {
         if(authenticate(userinfo, pass)){
             System.out.println("Authenticated \n: Loading Dashboard");
             HelloApplication.closeStageContaining(forgotpswrdbtn);
-            HelloApplication hi = new HelloApplication();
-            hi.displaypage("Dashboard.fxml", "dashboard.css", 1280, 720);
+<<<<<<< Updated upstream
+            
+=======
+            HelloApplication.displaypage("dashboard.fxml");
+>>>>>>> Stashed changes
         }
         System.out.println(userinfo);
     }
