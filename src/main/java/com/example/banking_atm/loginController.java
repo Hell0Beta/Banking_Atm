@@ -57,9 +57,9 @@ public class loginController {
 
 
     private static boolean authenticate(String userinfo, String pass) throws IOException {
-        if(test.nameExists(userinfo)){
-            var key = test.fetchuserKey(userinfo);
-            var user = test.fetch_a_user(key);
+        if(test.UserTable.nameExists(userinfo)){
+            var key = test.UserTable.fetchuserKey(userinfo);
+            var user = test.UserTable.fetch_a_user(key);
             if(user.get("PIN").equals(pass)){
                 return true;
             }
