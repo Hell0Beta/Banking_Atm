@@ -1,8 +1,7 @@
 package com.example.banking_atm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import jdk.jshell.spi.ExecutionControl;
 
-import javax.print.DocFlavor;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -164,8 +163,8 @@ public class test {
             return finance;
         }
 
-        public static delete_a_finance(String account_no) {
-            
+        public static void delete_a_finance(String account_no) {
+
         }
     }
     public static void main(String[] args) throws IOException {
