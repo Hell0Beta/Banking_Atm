@@ -39,6 +39,18 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    public  void displaypage(String fxmlFile, String css,int x, int y) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxmlFile));
+        Scene scene = new Scene(fxmlLoader.load(), x, y);
+        Stage stage = new Stage();
+        var path = "file:src/main/resources/com/example/banking_atm/css/"+css;
+        scene.getStylesheets().add(path);
+
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public static void closeStageContaining(Button button) {
         Stage currentstage = (Stage) button.getScene().getWindow();
         currentstage.close();

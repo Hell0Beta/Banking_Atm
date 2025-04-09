@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.banking_atm.Dashboard"
+            styleClass="root">
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar">
+            <!-- Top part of sidebar -->
+            <HBox fx:id="brandBox" styleClass="brand-logo">
+                <FontAwesomeIconView fx:id="brandIcon" glyphName="SHIP" size="1.5em" />
+                <Label fx:id="brandText" styleClass="brand-text" text="Whale Loans" />
+            </HBox>
+
+            <!-- Navigation Links -->
+            <VBox fx:id="navLinks" styleClass="nav-links">
+
+                <HBox fx:id="navHome" styleClass="nav-item, active" onMouseClicked="#handleNavHome">
+                    <FontAwesomeIconView glyphName="HOME" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Home" />
+                </HBox>
+                <HBox fx:id="navBalance" styleClass="nav-item" onMouseClicked="#handleNavBalance">
+                    <FontAwesomeIconView glyphName="MONEY" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Balance" />
+                </HBox>
+                <HBox fx:id="navCalculator" styleClass="nav-item" onMouseClicked="#handleNavCalculator">
+                    <FontAwesomeIconView glyphName="CALCULATOR" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Calculator" />
+                </HBox>
+                <HBox fx:id="navVaults" styleClass="nav-item" onMouseClicked="#handleNavVaults">
+                    <FontAwesomeIconView glyphName="LOCK" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Vaults" />
+                </HBox>
+                <HBox fx:id="navTransactions" styleClass="nav-item" onMouseClicked="#handleNavTransactions">
+                    <FontAwesomeIconView glyphName="FILE_TEXT" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Transactions" />
+                </HBox>
+                <HBox fx:id="navDocs" styleClass="nav-item" onMouseClicked="#handleNavDocs">
+                    <FontAwesomeIconView glyphName="FILE" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Docs" />
+                </HBox>
+                <HBox fx:id="navSettings" styleClass="nav-item" onMouseClicked="#handleNavSettings">
+                    <FontAwesomeIconView glyphName="GEAR" styleClass="nav-icon" />
+                    <Label styleClass="link-text" text="Settings" />
+                </HBox>
+            </VBox>
+
+            <!-- Bottom part of sidebar (logout) -->
+            <Region VBox.vgrow="ALWAYS" />
+            <HBox fx:id="logoutBox" styleClass="nav-item logout" onMouseClicked="#handleLogout">
+                <FontAwesomeIconView glyphName="SIGN_OUT" styleClass="nav-icon" />
+                <Label styleClass="link-text" text="Logout" />
+            </HBox>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <VBox fx:id="mainContent" styleClass="main-content">
+            <!-- Top Navigation Bar -->
+            <HBox fx:id="topBar" styleClass="topbar">
+                <Label fx:id="priceLabel" styleClass="price-indicator" text="1 HUMP = $4.3" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="connectBtn" styleClass="connect-btn" text="Connect Wallet" onAction="#handleConnectWallet"/>
+            </HBox>
+
+            <!-- Page Content -->
+            <VBox fx:id="contentArea" styleClass="content-area">
+                <Label fx:id="pageTitle" styleClass="page-title" text="Single Stake (3,3)" />
+
+                <HBox fx:id="contentRow" styleClass="content-row">
+                    <!-- Left Card -->
+                    <VBox fx:id="stakeCard" styleClass="stake-card">
+                        <FontAwesomeIconView fx:id="walletIcon" glyphName="MONEY" styleClass="wallet-icon" size="2em" />
+                        <Button fx:id="authenticateBtn" styleClass="authenticate-btn" text="Connect / Authenticate" onAction="#handleAuthenticate"/>
+
+                        <GridPane fx:id="statsGrid" styleClass="stats-row">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="130" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="130" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0" />
+                                <RowConstraints vgrow="SOMETIMES" minHeight="10.0" prefHeight="30.0" />
+                            </rowConstraints>
+
+                            <VBox fx:id="apyBox" styleClass="stat-item" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <Label fx:id="apyLabel" styleClass="stat-label" text="APY" />
+                                <Label fx:id="apyValue" styleClass="stat-value" text="257,900%" />
+                            </VBox>
+
+                            <VBox fx:id="totalDepositedBox" styleClass="stat-item" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                <Label styleClass="stat-label" text="Total Value Deposited" />
+                                <Label fx:id="totalDepositedValue" styleClass="stat-value" text="\$571,320" />
+                            </VBox>
+
+                            <VBox fx:id="indexBox" styleClass="stat-item" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                <Label styleClass="stat-label" text="Current Index" />
+                                <Label fx:id="indexValue" styleClass="stat-value" text="1.99 HUMP" />
+                            </VBox>
+
+                            <VBox fx:id="rebaseBox" styleClass="stat-item" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label styleClass="stat-label" text="Next Rebase" />
+                                <Label fx:id="rebaseValue" styleClass="stat-value" text="7 hrs, 7 mins" />
+                            </VBox>
+                        </GridPane>
+                    </VBox>
+
+                    <!-- Right Dark Panel -->
+                    <VBox fx:id="darkPanel" styleClass="dark-panel">
+                        <VBox fx:id="balanceInfo" styleClass="balance-info">
+                            <Label fx:id="balanceAmount" styleClass="balance-amount" text="\$0.00" />
+                            <Label fx:id="earningsLabel" styleClass="earnings" text="Your Earnings / Day" />
+                        </VBox>
+
+                        <HBox fx:id="actionButtons" styleClass="action-buttons">
+                            <Button fx:id="depositBtn" styleClass="primary-btn" text="Deposit" onAction="#handleDeposit"/>
+                            <Button fx:id="withdrawBtn" styleClass="secondary-btn" text="Withdraw" onAction="#handleWithdraw"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

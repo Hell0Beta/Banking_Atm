@@ -80,7 +80,7 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Button>
-    <Button layoutX="546.0" layoutY="567.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="Sign-in" textFill="#efebeb">
+    <Button fx:id="signinButton" layoutY="567.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="Sign-in" textFill="#efebeb" onAction="#handleSignin">
          <font>
             <Font size="14.0" />
          </font>

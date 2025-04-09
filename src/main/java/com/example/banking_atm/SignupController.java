@@ -27,7 +27,7 @@ public class SignupController {
     void handleSignin(ActionEvent event) throws IOException {
         System.out.println("BackToLogin was clicked");
         HelloApplication.closeStageContaining(signinButton);
-        HelloApplication.displaypage("Login1.fxml");
+        HelloApplication.displaypage("Login1.fxml", 603, 474);
     }
 
     @FXML

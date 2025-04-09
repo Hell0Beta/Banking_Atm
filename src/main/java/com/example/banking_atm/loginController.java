@@ -42,17 +42,20 @@ public class loginController {
         var userinfo = username.getText();
         var pass = password.getText();
         if(authenticate(userinfo, pass)){
-            System.out.println("Authenticated \n: Loading next page");
+            System.out.println("Authenticated \n: Loading Dashboard");
             HelloApplication.closeStageContaining(forgotpswrdbtn);
-            HelloApplication.displaypage("withdrawal.fxml");
+            HelloApplication hi = new HelloApplication();
+            hi.displaypage("Dashboard.fxml", "dashboard.css", 1280, 720);
         }
         System.out.println(userinfo);
     }
 
 
     @FXML
-    void onSignup(MouseEvent event) {
-        System.out.printf("SignUp Clicked, loading `Signup_coming_soon.fxml`");
+    void onSignup(MouseEvent event) throws IOException {
+        System.out.printf("SignUp Clicked, loading `Signup.fxml`");
+        HelloApplication.closeStageContaining(forgotpswrdbtn);
+        HelloApplication.displaypage("signup.fxml", 603, 614);
     }
 
 

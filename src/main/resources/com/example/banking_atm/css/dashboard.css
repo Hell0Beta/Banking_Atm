@@ -1,0 +1,243 @@
+/* Root and global styles */
+.root {
+    -fx-font-family: "System", sans-serif;
+    -fx-background-color: white;
+}
+
+/* Sidebar styling */
+.sidebar {
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 1 0 0;
+    -fx-pref-width: 70;
+    -fx-min-width: 70;
+    -fx-max-width: 70;
+    -fx-spacing: 10;
+    -fx-padding: 0;
+}
+
+.sidebar:hover {
+    -fx-pref-width: 200;
+    -fx-min-width: 200;
+    -fx-max-width: 200;
+}
+
+.brand-logo {
+    -fx-padding: 16;
+    -fx-spacing: 8;
+    -fx-alignment: center-left;
+}
+
+.brand-text {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-opacity: 0;
+}
+
+.sidebar:hover .brand-text {
+    -fx-opacity: 1;
+}
+
+.nav-links {
+    -fx-spacing: 5;
+    -fx-padding: 10 0 0 0;
+}
+
+.nav-item {
+    -fx-padding: 10 16;
+    -fx-spacing: 16;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+.nav-icon {
+    -fx-font-size: 16;
+    -fx-min-width: 20;
+    -fx-text-alignment: center;
+    -fx-fill: #333;
+}
+
+.link-text {
+    -fx-opacity: 0;
+    -fx-text-fill: #333;
+}
+
+.sidebar:hover .link-text {
+    -fx-opacity: 1;
+}
+
+.nav-item:hover {
+    -fx-background-color: #e5e5e5;
+}
+
+.nav-item.active {
+    -fx-background-color: #ddd;
+    -fx-font-weight: bold;
+}
+
+.logout {
+    -fx-padding: 10 16;
+}
+
+/* Top bar styling */
+.topbar {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 16;
+    -fx-pref-height: 60;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+.price-indicator {
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+.connect-btn {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+.connect-btn:hover {
+    -fx-opacity: 0.8;
+}
+
+/* Main content area */
+.content-area {
+    /* Increase padding around the content */
+    -fx-padding: 32;
+    /* Increase the default vertical spacing if these are stacked vertically */
+    -fx-spacing: 32;
+}
+
+.page-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
+/* The row that holds both the stake card and the dark panel side by side */
+.content-row {
+    -fx-spacing: 48;     /* Increase horizontal spacing between the two cards */
+    -fx-alignment: center_left;
+}
+
+/* Left white card */
+.stake-card {
+    -fx-background-color: white;
+    -fx-padding: 32;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-spacing: 16;
+
+    /* Increase minimum & preferred widths to prevent it from being too small */
+    -fx-min-width: 400;
+    -fx-pref-width: 500;
+    -fx-max-width: 800;
+}
+
+.wallet-icon {
+    -fx-fill: black;
+    -fx-font-size: 32;
+}
+
+.authenticate-btn {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.authenticate-btn:hover {
+    -fx-opacity: 0.8;
+}
+
+.stats-row {
+    -fx-hgap: 16;
+    -fx-vgap: 16;
+    -fx-padding: 16 0 0 0;
+}
+
+.stat-item {
+    -fx-background-color: #fafafa;
+    -fx-border-color: #eee;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 12;
+    -fx-spacing: 4;
+}
+
+.stat-label {
+    -fx-font-size: 12;
+    -fx-text-fill: #777;
+}
+
+.stat-value {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+/* Right dark panel */
+.dark-panel {
+    -fx-background-color: black;
+    -fx-padding: 32;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-spacing: 16;
+
+    /* Increase minimum & preferred widths to ensure it isn’t too narrow */
+    -fx-min-width: 300;
+    -fx-pref-width: 350;
+    -fx-max-width: 600;
+}
+
+.balance-info {
+    -fx-spacing: 8;
+}
+
+.balance-amount {
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.earnings {
+    -fx-font-size: 14;
+    -fx-text-fill: #ccc;
+}
+
+.action-buttons {
+    -fx-spacing: 16;
+    -fx-padding: 16 0 0 0;
+}
+
+.primary-btn {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.primary-btn:hover {
+    -fx-opacity: 0.8;
+}
+
+.secondary-btn {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.secondary-btn:hover {
+    -fx-opacity: 0.8;
+}
+
+/* Media query equivalent for smaller screens */
+/* This would need to be handled in Java code by checking window width */

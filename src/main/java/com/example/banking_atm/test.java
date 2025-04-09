@@ -1,33 +1,29 @@
 package com.example.banking_atm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jdk.jshell.spi.ExecutionControl;
 
 import java.io.IOException;
 import java.util.*;
 import java.io.File;
 public class test {
-    public static Map<String, Object> readjson() throws IOException{
+    public static Map readjson() throws IOException{
 //      This line creates a ObjectMapper object - This allows us to convert a json object to a hash map
         ObjectMapper objectMapper = new ObjectMapper();
 
 //      hashmap(key:str,val:Obj) var  objectmapper reads value from ----the---`data.json` file, further specifies its a hash map
-        Map<String, Object> data = objectMapper.readValue(new File("data.json"), Map.class) ;
 
-        return data;
+        return objectMapper.readValue(new File("data.json"), Map.class);
     }
 
-    public class UserTable{
+    public static class UserTable{
         public static Map<String, Object> fetchUsers() throws IOException {
             var data = readjson();
             var userobj = data.get("users");
-            Map<String, Object> users = new LinkedHashMap<>((Map<? extends String, ?>) userobj);
-            return users;
+            return new LinkedHashMap<>((Map<? extends String, ?>) userobj);
         }
 
         public static Map<String, Object> fetch_a_user(String account_no) throws IOException {
             var users = fetchUsers();
-            Map<String, Object> user = new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
-            return user;
+            return new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
         }
         public static String fetchuserKey(String userinfo) throws IOException {
             var users = fetchUsers();
@@ -180,9 +176,10 @@ public class test {
             System.out.println("Cleared, remaining" + finances + "\n");
 
         }
+
         public static void create_a_finance(String account_no) throws IOException {
             var finances = fetchFinances();
-            if(!finances.containsKey(account_no)){
+            if(!finances.containsKey(account_no) && UserTable.fetchUsers().containsKey(account_no)){
                 Map<String, Object> newfinance = new HashMap<>();
                 newfinance.put("balance", "GHC 0000");
                 newfinance.put("time_logs", new ArrayList<>());
@@ -192,13 +189,13 @@ public class test {
                 System.out.println(finances);
                 save_finances(finances);
             }
-
         }
+
         public static void create_a_finance(String account_no,String balance){
 
         }
         public static void create_a_finance(String account_no,String balance, String time_logs, String withdrawals){
-//lplp
+
         }
     }
     public static void main(String[] args) throws IOException {
