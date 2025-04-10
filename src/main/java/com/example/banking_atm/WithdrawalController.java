@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class WithdrawalController {
 
     @FXML
@@ -41,9 +43,9 @@ public class WithdrawalController {
     }
 
     @FXML
-    void onWithdraw(ActionEvent event) {
+    void onWithdraw(ActionEvent event) throws IOException {
         int amount = Integer.valueOf(amountField1.getText());
-        model.FinancesTable.
+        model.FinancesTable.deposit("340094", amount);
     }
 
 }
