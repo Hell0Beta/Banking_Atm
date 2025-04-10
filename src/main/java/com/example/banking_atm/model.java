@@ -216,13 +216,19 @@ public class model {
             setBalanceAfterDeposit(account_no, amount);
             setTimeLog(account_no);
             setWithdraws(account_no, 0);
+            setDeposit(account_no, amount);
+
+
+        }
+
+        private static void setDeposit(String account_no, int amount) throws IOException {
             var finance = fetch_a_finance(account_no);
             ArrayList deposits = (ArrayList) finance.get("deposit");
             deposits.add(amount);
             finance.put("deposit", deposits);
-
-
-
+            var finances = fetchFinances();
+            finances.put(account_no, finance);
+            save_finances(finance);
         }
 
         private static void setWithdraws(String account_no, int amount) throws IOException {
