@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
+
 public class dashboardController {
 
     @FXML
@@ -54,8 +56,9 @@ public class dashboardController {
     }
 
     @FXML
-    void onDeposit(ActionEvent event) {
-
+    void onDeposit(ActionEvent event) throws IOException {
+        HelloApplication.closeStageContaining(btnDeposit);
+        HelloApplication.displaypage("withdrawal.fxml", 603, 474);
     }
 
     @FXML
@@ -64,7 +67,9 @@ public class dashboardController {
     }
 
     @FXML
-    void onWithdraw(ActionEvent event) {
+    void onWithdraw(ActionEvent event) throws IOException {
+        HelloApplication.closeStageContaining(btnDeposit);
+        HelloApplication.displaypage("withdrawal.fxml", 603, 474);
 
     }
 

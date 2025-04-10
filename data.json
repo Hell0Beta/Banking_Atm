@@ -42,5 +42,8 @@
       "withdrawals" : [ ]
     }
   },
+  "Session" : {
+    "id" : "string containing info"
+  },
   "description" : " \nThis json file stores the data for our\nBank ATM java project.\nIt has two tables users and finances, and stores continuous data in lists"
 }
