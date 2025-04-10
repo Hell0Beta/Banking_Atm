@@ -12,10 +12,19 @@ public class WithdrawalController {
     private TextField amountField;
 
     @FXML
+    private TextField amountField1;
+
+    @FXML
     private Button btnCancel;
 
     @FXML
+    private Button btnCancel1;
+
+    @FXML
     private Button btnWithdraw;
+
+    @FXML
+    private Button btnWithdraw1;
 
     @FXML
     private TextField phoneNumberField;
@@ -24,13 +33,17 @@ public class WithdrawalController {
     private PasswordField pinField;
 
     @FXML
+    private PasswordField pinField1;
+
+    @FXML
     void onCancel(ActionEvent event) {
 
     }
 
     @FXML
     void onWithdraw(ActionEvent event) {
-
+        int amount = Integer.valueOf(amountField1.getText());
+        model.FinancesTable.
     }
 
 }

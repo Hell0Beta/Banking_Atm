@@ -53,4 +53,5 @@ public final class UserSession {
     public String toString() {
         return "UserSession{" + "username=" + username + ", pin=" + pin + ", email=" + email + '}';
     }
+
 }

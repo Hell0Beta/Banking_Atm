@@ -1,6 +1,10 @@
 package com.example.banking_atm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
 import java.io.IOException;
 import java.util.*;
 import java.io.File;
@@ -208,12 +212,53 @@ public class model {
             }
         }
 
-        public static void create_a_finance(String account_no,String balance){
+        public static void deposit(String account_no, int amount ) throws IOException {
+            setBalanceAfterDeposit(account_no, amount);
+            setTimeLog(account_no);
+            setWithdraws(account_no, 0);
+            var finance = fetch_a_finance(account_no);
+            ArrayList deposits = (ArrayList) finance.get("deposit");
+            deposits.add(amount);
+            finance.put("deposit", deposits);
+
+
 
         }
 
-        public static void create_a_finance(String account_no,String balance, String time_logs, String withdrawals){
+        private static void setWithdraws(String account_no, int amount) throws IOException {
+            var finance = fetch_a_finance(account_no);
+            ArrayList withdraws = (ArrayList) finance.get("withdrawals");
+            withdraws.add(amount);
+            finance.put("withdrawals", withdraws);
+            var finances = fetchFinances();
+            finances.put(account_no, finance);
+            save_finances(finances);
+        }
 
+        private static void setTimeLog(String account_no) throws IOException {
+            var finance = fetch_a_finance(account_no);
+            ArrayList timelog = (ArrayList) finance.get("time_logs");
+            timelog.add(time());
+            finance.put("time_logs", timelog);
+            var finances = fetchFinances();
+            finances.put(account_no, finance);
+            save_finances(finances);
+        }
+
+        private static void setBalanceAfterDeposit(String account_no, int amount) throws IOException {
+            var finance = fetch_a_finance(account_no);
+            String balance = (String) finance.get("balance");
+            balance = balance.substring(3,balance.length()-1);
+            int intbalance = Integer.parseInt(balance);
+            intbalance += amount;
+            finance.put("balance", String.valueOf(intbalance));
+            var finances = fetchFinances();
+            finances.put(account_no, finance);
+            save_finances(finances);
+        }
+
+        public static String time(){
+            return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         }
     }
 
