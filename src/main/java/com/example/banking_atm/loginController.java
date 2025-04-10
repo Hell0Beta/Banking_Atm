@@ -44,7 +44,7 @@ public class loginController {
         if(authenticate(userinfo, pass)){
             System.out.println("Authenticated \n: Loading Dashboard");
             HelloApplication.closeStageContaining(forgotpswrdbtn);
-//            Map<String, Object> user = JSONDatabase.fetchuserKey(userinfo);
+            Map<String, Object> user = model.fetchuserKey(userinfo);
             String accountNo = user.get("account_no").toString();
             String email = user.get("email").toString();
             String pin = user.get("PIN").toString();
