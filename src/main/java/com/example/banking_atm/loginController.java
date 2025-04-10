@@ -51,8 +51,24 @@ public class loginController {
             String pin = user.get("PIN").toString();
             UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
 
+//            HelloApplication.displaypage("dashboard.fxml", 774, 418);
+            // Load FXML and get the controller
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+            Scene scene = new Scene(loader.load());
+            // Get the controller and pass the welcome message
+            dashboardController controller = loader.getController();
+            controller.setWelcomeText("Welcome " + userinfo + "!");
 
-            HelloApplication.displaypage("dashboard.fxml", 774, 418);
+            Map<String, Object> financeData = model.FinancesTable.fetch_a_finance(accountNo);
+            String balance = financeData.get("balance").toString();
+            System.out.println("Balance: " + balance);
+
+            controller.setBankBalance(balance);
+
+            // Show new stage
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
 
         }
         System.out.println(userinfo);

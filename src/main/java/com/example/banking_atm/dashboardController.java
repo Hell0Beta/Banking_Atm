@@ -11,7 +11,8 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 
 public class dashboardController {
-
+//    @FXML
+//    public static java.awt.Label txtWelcome;
     @FXML
     private Button btnDeposit;
 
@@ -78,5 +79,11 @@ public class dashboardController {
 
     }
 
+    public void setWelcomeText(String text) {
+        txtWelcome.setText(text);
+    }
 
+    public void setBankBalance(String balance) {
+        lblBalance.setText(balance);
+    }
 }

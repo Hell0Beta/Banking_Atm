@@ -29,7 +29,7 @@
   },
   "finances" : {
     "template-user-account_no" : {
-      "balance" : "GHC 0000",
+      "balance" : "GHC 1000",
       "time_logs" : [ ],
       "withdrawals" : [ ],
       "deposit" : [ ]
