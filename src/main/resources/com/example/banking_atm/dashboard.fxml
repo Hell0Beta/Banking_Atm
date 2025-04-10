@@ -28,81 +28,89 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="774.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.dashboardController">
    <children>
       <VBox prefHeight="418.0" prefWidth="54.0" spacing="10.0" style="-fx-border-color: #cccccc;">
-         <children>
-            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_menu_60px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" top="7.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fx:id="btndashboardHome" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="36.0" onMouseClicked="#openDashboard" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-               <image>
-                  <Image url="@Images/icons8_home_48px.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="btnimgViewFinances" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="72.0" onMouseClicked="#onViewFinances" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_wallet_60px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_calculator_60px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_lock_52px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_file_preview_48px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_edit_file_100px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <image>
-                  <Image url="@Images/icons8_settings_100px.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ImageView>
-            <Region prefHeight="19.0" prefWidth="54.0" />
-            <ImageView fx:id="btnimgLogout" fitHeight="61.0" fitWidth="30.0" layoutX="10.0" layoutY="252.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-               <image>
-                  <Image url="@Images/icons8_exit_48px.png" />
-               </image>
-            </ImageView>
-         </children>
+         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true"
+                    style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" top="7.0"/>
+            </VBox.margin>
+            <Image url="@Images/icons8_menu_60px.png"/>
+         </ImageView>
+         <ImageView fx:id="btndashboardHome" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="36.0"
+                    onMouseClicked="#openDashboard" pickOnBounds="true" preserveRatio="true"
+                    style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+            <image>
+               <Image url="@Images/icons8_home_48px.png"/>
+            </image>
+         </ImageView>
+         <ImageView fx:id="btnimgViewFinances" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="72.0"
+                    onMouseClicked="#onViewFinances" pickOnBounds="true" preserveRatio="true"
+                    style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_wallet_60px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="108.0" pickOnBounds="true"
+                    preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_calculator_60px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="144.0" pickOnBounds="true"
+                    preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_lock_52px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="180.0" pickOnBounds="true"
+                    preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_file_preview_48px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="216.0" pickOnBounds="true"
+                    preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_edit_file_100px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="281.0" pickOnBounds="true"
+                    preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <image>
+               <Image url="@Images/icons8_settings_100px.png"/>
+            </image>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </ImageView>
+         <Region prefHeight="19.0" prefWidth="54.0"/>
+         <ImageView fx:id="btnimgLogout" fitHeight="61.0" fitWidth="30.0" layoutX="10.0" layoutY="252.0"
+                    onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true"
+                    style="-fx-effect: dropshadow(three-pass-box, rgba(0,1,1,0.1), 10,0,0,2);">
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+            <image>
+               <Image url="@Images/icons8_exit_48px.png"/>
+            </image>
+         </ImageView>
       </VBox>
       <HBox layoutX="54.0" prefHeight="50.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: White; -fx-border-color: #cccccc;">
          <children>
@@ -209,11 +217,11 @@
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" />
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
-                           <children>
-                              <Text fx:id="lblEmergencyfund" layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Fund" />
-                              <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label" />
-                           </children>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0"
+                                    style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
+                           <Text fx:id="lblEmergencyfund" layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE"
+                                 strokeWidth="0.0" text="Emergency Fund"/>
+                           <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label"/>
                         </AnchorPane>
                      </children>
                   </VBox>

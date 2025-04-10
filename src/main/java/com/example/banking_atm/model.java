@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.*;
 import java.io.File;
-public class test {
+public class model {
     public static Map readjson() throws IOException{
 //      This line creates a ObjectMapper object - This allows us to convert a json object to a hash map
         ObjectMapper objectMapper = new ObjectMapper();
@@ -25,6 +25,7 @@ public class test {
             var users = fetchUsers();
             return new LinkedHashMap<>((Map<? extends String, ?>) users.get(account_no));
         }
+
         public static String fetchuserKey(String userinfo) throws IOException {
             var users = fetchUsers();
             for (Map.Entry<String, Object> entry : users.entrySet()) {
@@ -121,6 +122,22 @@ public class test {
             return true;
         }
 
+        public static boolean changePin(String account_no, String newPIN) throws IOException {
+            Map<String, Object> users = fetchUsers();
+            if (!users.containsKey(account_no)) {
+                System.out.println("User not found");
+                return false ;
+            }
+            Map<String, Object> user = (Map<String, Object>) users.get(account_no);
+
+            if (newPIN != null && !newPIN.isEmpty()) {user.put("PIN", newPIN);}
+
+
+            save_user(users);
+            System.out.println("User Updated Successfully");
+            return true;
+        }
+
         public static void create_a_user(String name, String PIN, String email) throws IOException{
             var users = fetchUsers();
             int randomy = (int)(Math.random()*1000000+4);
@@ -133,7 +150,7 @@ public class test {
                 newuser.put("PIN", PIN);
                 newuser.put("email", email);
                 users.putIfAbsent(account_no, newuser);
-
+                FinancesTable.create_a_finance(account_no);
                 save_user(users);
                 System.out.println("Successful");
             }else{
@@ -194,13 +211,16 @@ public class test {
         public static void create_a_finance(String account_no,String balance){
 
         }
+
         public static void create_a_finance(String account_no,String balance, String time_logs, String withdrawals){
 
         }
     }
+
+    public class Session{
+        
+    }
     public static void main(String[] args) throws IOException {
-        System.out.println("j");
-        FinancesTable.fetch_a_finance("template-user-account_no");
-        FinancesTable.create_a_finance("340094");
+        File session = new File("session.json");
     }
 }

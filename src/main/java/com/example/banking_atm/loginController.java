@@ -44,14 +44,11 @@ public class loginController {
         if(authenticate(userinfo, pass)){
             System.out.println("Authenticated \n: Loading Dashboard");
             HelloApplication.closeStageContaining(forgotpswrdbtn);
-<<<<<<< Updated upstream
 
             HelloApplication hi = new HelloApplication();
             hi.displaypage("dashboard.fxml", 774, 418);
+            HelloApplication.displaypage("dashboard.fxml", 774, 418);
             
-=======
-            HelloApplication.displaypage("dashboard.fxml");
->>>>>>> Stashed changes
         }
         System.out.println(userinfo);
     }
@@ -66,12 +63,10 @@ public class loginController {
 
 
     private static boolean authenticate(String userinfo, String pass) throws IOException {
-        if(test.UserTable.nameExists(userinfo)){
-            var key = test.UserTable.fetchuserKey(userinfo);
-            var user = test.UserTable.fetch_a_user(key);
-            if(user.get("PIN").equals(pass)){
-                return true;
-            }
+        if(model.UserTable.nameExists(userinfo)){
+            var key = model.UserTable.fetchuserKey(userinfo);
+            var user = model.UserTable.fetch_a_user(key);
+            return user.get("PIN").equals(pass);
         }
         return false;
     }

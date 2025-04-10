@@ -30,9 +30,11 @@ public class ForgotPin {
     @FXML
     void onReset(ActionEvent event) throws IOException {
 
-        if(test.UserTable.dataUserExists("email", txtEmailorPhone.getText())){
+        if(model.UserTable.dataUserExists("email", txtEmailorPhone.getText())){
             System.out.println("Email exists");
             System.out.println("Reset Clicked, loading `ResetComingSoon.fxml`");
+            HelloApplication.closeStageContaining(btnReset);
+            HelloApplication.displaypage("restpin.fxml", 603, 474);
         }else {
             System.out.println("kokokpk;");
         }

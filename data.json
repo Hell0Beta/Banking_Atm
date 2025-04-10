@@ -15,6 +15,11 @@
       "PIN" : "1253",
       "name" : "User 2",
       "email" : "user2email@example.com"
+    },
+    "176520" : {
+      "PIN" : "2232",
+      "name" : "James Gunn",
+      "email" : "punana@marvel.com"
     }
   },
   "finances" : {
@@ -36,6 +41,9 @@
       "time_logs" : [ ],
       "withdrawals" : [ ]
     }
+  },
+  "Session" : {
+    "id" : "string containing info"
   },
   "description" : " \nThis json file stores the data for our\nBank ATM java project.\nIt has two tables users and finances, and stores continuous data in lists"
 }
