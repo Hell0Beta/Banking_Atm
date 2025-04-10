@@ -26,7 +26,7 @@ public class Resetpin {
     void onBacktoLogin(ActionEvent event) throws IOException {
         System.out.println("Backtologin clicked");
         HelloApplication.closeStageContaining(resetpinbtn);
-        HelloApplication.displaypage("Login1.fxml", 774, 418);
+        HelloApplication.displaypage("Login1.fxml", 603, 474);
     }
 
     @FXML
