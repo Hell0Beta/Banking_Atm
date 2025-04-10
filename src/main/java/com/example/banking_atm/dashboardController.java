@@ -59,7 +59,7 @@ public class dashboardController {
     }
 
     @FXML
-    void onViewFinances(ActionEvent event) {
+    void onViewFinances(MouseEvent event) {
 
     }
 

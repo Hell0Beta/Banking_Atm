@@ -15,6 +15,11 @@
       "PIN" : "1253",
       "name" : "User 2",
       "email" : "user2email@example.com"
+    },
+    "176520" : {
+      "PIN" : "2232",
+      "name" : "James Gunn",
+      "email" : "punana@marvel.com"
     }
   },
   "finances" : {

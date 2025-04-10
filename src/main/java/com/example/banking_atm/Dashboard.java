@@ -9,6 +9,8 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.GridPane;
 
+import java.io.IOException;
+
 public class Dashboard {
 
     // Sidebar Elements
@@ -109,9 +111,11 @@ public class Dashboard {
     }
 
     @FXML
-    private void handleWithdraw() {
+    private void handleWithdraw() throws IOException {
         System.out.println("Withdraw button clicked");
-        // TODO: Add withdraw logic here.
+        HelloApplication.closeStageContaining(authenticateBtn);
+        HelloApplication.displaypage("withdrawal.fxml");
+
     }
 
     // ========================
