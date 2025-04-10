@@ -217,8 +217,13 @@ public class model {
             setTimeLog(account_no);
             setWithdraws(account_no, 0);
             setDeposit(account_no, amount);
+            getBalance(account_no);
 
+        }
 
+        private static String getBalance(String account_no) throws IOException {
+            var finance = fetch_a_finance(account_no);
+            return (String) finance.get("balance");
         }
 
         private static void setDeposit(String account_no, int amount) throws IOException {
