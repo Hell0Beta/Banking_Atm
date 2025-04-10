@@ -44,11 +44,15 @@ public class loginController {
         if(authenticate(userinfo, pass)){
             System.out.println("Authenticated \n: Loading Dashboard");
             HelloApplication.closeStageContaining(forgotpswrdbtn);
+//            Map<String, Object> user = JSONDatabase.fetchuserKey(userinfo);
+            String accountNo = user.get("account_no").toString();
+            String email = user.get("email").toString();
+            String pin = user.get("PIN").toString();
+            UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
 
-            HelloApplication hi = new HelloApplication();
-            hi.displaypage("dashboard.fxml", 774, 418);
+
             HelloApplication.displaypage("dashboard.fxml", 774, 418);
-            
+
         }
         System.out.println(userinfo);
     }
