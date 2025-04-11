@@ -2,11 +2,14 @@ package com.example.banking_atm;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -58,8 +61,14 @@ public class dashboardController {
 
     @FXML
     void onDeposit(ActionEvent event) throws IOException {
-        HelloApplication.closeStageContaining(btnDeposit);
-        HelloApplication.displaypage("withdrawal.fxml", 603, 474);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("deposit.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 431, 291);
+
+        Stage stage = new Stage();
+        stage.setTitle("Deposit");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     @FXML
