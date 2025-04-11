@@ -2,17 +2,19 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-border-color: lightgrey;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.WithdrawalController">
-    <VBox alignment="CENTER" layoutX="249.0" layoutY="206.0" prefHeight="405.0" prefWidth="511.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: lightgrey; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="143.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="554.0" AnchorPane.topAnchor="206.0">
+<AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1282.0" style="-fx-border-color: lightgrey;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.WithdrawalController">
+    <VBox alignment="CENTER" layoutX="148.0" layoutY="131.0" prefHeight="443.0" prefWidth="489.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: lightgrey; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="646.0" AnchorPane.topAnchor="130.0">
         <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
         </padding>
@@ -23,22 +25,6 @@
                 <Insets bottom="20.0" />
             </padding>
         </Label>
-
-              <!-- Phone Number Input -->
-        <VBox prefHeight="58.0" prefWidth="990.0" spacing="5.0">
-            <Label style="-fx-font-weight: bold;" text="Recipient Phone Number">
-            <font>
-               <Font size="17.0" />
-            </font></Label>
-            <TextField fx:id="phoneNumberField" promptText="Enter phone number">
-                <VBox.margin>
-                    <Insets bottom="10.0" />
-                </VBox.margin>
-            <font>
-               <Font size="17.0" />
-            </font>
-            </TextField>
-        </VBox>
 
               <!-- PIN Input -->
         <VBox spacing="5.0">
@@ -69,6 +55,9 @@
                   <Font size="17.0" />
                </font>
                </TextField>
+      
+                    <!-- Phone Number Input -->
+              <VBox prefHeight="0.0" prefWidth="431.0" spacing="5.0" />
            </VBox>
         </VBox>
 
@@ -87,18 +76,30 @@
          <Insets />
       </opaqueInsets>
     </VBox>
-   <VBox layoutY="-1.0" prefHeight="798.0" prefWidth="116.0" style="-fx-border-color: lightgrey; -fx-background-color: white;">
+   <HBox layoutX="44.0" prefHeight="64.0" prefWidth="1236.0" style="-fx-border-color: lightgrey; -fx-background-color: white;">
       <children>
-         <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-         <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-         <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-      </children>
-   </VBox>
-   <HBox layoutX="114.0" prefHeight="100.0" prefWidth="1166.0" style="-fx-border-color: lightgrey; -fx-background-color: white;">
-      <children>
+         <Pane prefHeight="70.0" prefWidth="1108.0">
+            <children>
+               <Label layoutY="13.0" text="Manage Finances">
+                  <font>
+                     <Font name="System Bold" size="23.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
          <Label fx:id="userid" text="Label" />
+         <Label text="U1">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="30.0" fitWidth="29.0">
+            <image>
+               <Image url="@Images/icons8_user_48px.png" />
+            </image>
+         </ImageView>
       </children></HBox>
-   <VBox alignment="CENTER" layoutX="749.0" layoutY="202.0" prefHeight="466.0" prefWidth="511.0" spacing="20.0" style="-fx-background-color: #4a1e1e; -fx-border-color: lightgrey; -fx-border-radius: 10px;">
+   <VBox alignment="CENTER" layoutX="685.0" layoutY="131.0" prefHeight="436.0" prefWidth="511.0" spacing="20.0" style="-fx-background-color: #4a1e1e; -fx-border-color: lightgrey; -fx-border-radius: 10px;">
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </padding>
@@ -164,6 +165,38 @@
                </HBox>
             </children>
          </VBox>
+      </children>
+   </VBox>
+   <VBox layoutX="-2.0" layoutY="-4.0" prefHeight="596.0" prefWidth="19.0" style="-fx-border-color: lightgrey; -fx-background-color: white;">
+      <children>
+         <ImageView fitHeight="41.0" fitWidth="45.0">
+            <image>
+               <Image url="@Images/icons8_menu_60px.png" />
+            </image>
+         </ImageView>
+         <Pane prefHeight="58.0" prefWidth="60.0">
+            <children>
+               <ImageView fx:id="home" fitHeight="35.0" fitWidth="30.0" layoutX="6.0" layoutY="18.0" onMouseClicked="#onHome">
+                  <image>
+                     <Image url="@Images/icons8_home_48px.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Pane layoutX="11.0" layoutY="71.0" prefHeight="449.0" prefWidth="45.0">
+            <children>
+               <ImageView fitHeight="38.0" fitWidth="30.0" layoutX="6.0" layoutY="13.0">
+                  <image>
+                     <Image url="@Images/icons8_wallet_60px.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <ImageView fitHeight="31.0" fitWidth="34.0" onMouseClicked="#backtologin">
+            <image>
+               <Image url="@Images/icons8_exit_48px.png" />
+            </image>
+         </ImageView>
       </children>
    </VBox>
 </AnchorPane>

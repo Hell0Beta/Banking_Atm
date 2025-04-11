@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -20,6 +21,9 @@ public class DepositController {
     private TextField txtDepositAmount;
 
     @FXML
+    private Label username;
+
+    @FXML
     private TextField txtPin;
 
     @FXML
@@ -29,8 +33,9 @@ public class DepositController {
 
     @FXML
     void onDeposit(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login1.fxml"));
 
-        String userinfo = loginController.getUserinfo();
+        var controller = loader.getController();
 
         String accountNo = model.UserTable.fetchuserKey(userinfo);
         var user = model.UserTable.fetch_a_user(accountNo);
@@ -42,5 +47,7 @@ public class DepositController {
     }
 
 
-
+    void setUsername(String name){
+        username.setText(name);
+    }
 }

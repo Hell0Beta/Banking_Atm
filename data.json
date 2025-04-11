@@ -25,6 +25,16 @@
       "PIN" : "1221",
       "name" : "Peter Griffin",
       "email" : "familyvalues@gmail.com"
+    },
+    "215874" : {
+      "PIN" : "1212",
+      "name" : "John Doe",
+      "email" : "jonhnydoe@gmail.com"
+    },
+    "984882" : {
+      "PIN" : "1213",
+      "name" : "welch",
+      "email" : "welch@gmail.com"
     }
   },
   "finances" : {
@@ -45,6 +55,12 @@
       "deposit" : [ 2112, 2112 ],
       "time_logs" : [ "2025-04-10 19:53:31", "2025-04-10 19:54:07" ],
       "withdrawals" : [ 0, 0 ]
+    },
+    "984882" : {
+      "balance" : "91",
+      "deposit" : [ 50, 0, 23, 23 ],
+      "time_logs" : [ "2025-04-10 22:10:41", "2025-04-10 22:16:39", "2025-04-11 00:20:43", "2025-04-11 00:20:44" ],
+      "withdrawals" : [ 0, 5, 0, 0 ]
     }
   },
   "Session" : {

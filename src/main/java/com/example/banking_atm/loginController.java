@@ -90,7 +90,7 @@ public class loginController {
     void onSignup(MouseEvent event) throws IOException {
         System.out.printf("SignUp Clicked, loading `Signup.fxml`");
         HelloApplication.closeStageContaining(forgotpswrdbtn);
-        HelloApplication.displaypage("signup.fxml", 603, 614);
+        HelloApplication.displaypage("signup.fxml", 703, 614);
     }
 
 

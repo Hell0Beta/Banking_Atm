@@ -154,7 +154,7 @@ public class model {
                 newuser.put("PIN", PIN);
                 newuser.put("email", email);
                 users.putIfAbsent(account_no, newuser);
-                FinancesTable.create_a_finance(account_no);
+
                 save_user(users);
                 System.out.println("Successful");
             }else{
@@ -202,7 +202,7 @@ public class model {
             var finances = fetchFinances();
             if(!finances.containsKey(account_no) && UserTable.fetchUsers().containsKey(account_no)){
                 Map<String, Object> newfinance = new HashMap<>();
-                newfinance.put("balance", "GHC 0000");
+                newfinance.put("balance", "0000");
                 newfinance.put("time_logs", new ArrayList<>());
                 newfinance.put("withdrawals", new ArrayList<>());
                 newfinance.put("deposit", new ArrayList<>());
