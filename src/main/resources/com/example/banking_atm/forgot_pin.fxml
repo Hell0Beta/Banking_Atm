@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="474.0" prefWidth="603.0" style="-fx-background-radius: 20" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.ForgotPin">
+<AnchorPane prefHeight="321.0" prefWidth="370.0" style="-fx-background-radius: 20" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.ForgotPin">
     <children>
-      <Pane layoutX="122.0" layoutY="67.0" prefHeight="314.0" prefWidth="369.0" style="-fx-background-color: fff;">
+      <Pane prefHeight="314.0" prefWidth="369.0" style="-fx-background-color: fff;">
          <children>
               <Label layoutX="133.0" layoutY="39.0" prefHeight="30.0" prefWidth="118.0" text="Forgot PIN">
                   <font>

@@ -49,9 +49,9 @@ public class loginController {
             var user = model.UserTable.fetch_a_user(accountNo);
             String email = user.get("email").toString();
             String pin = user.get("PIN").toString();
-            UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
+            //UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
 
-//            HelloApplication.displaypage("dashboard.fxml", 774, 418);
+            //HelloApplication.displaypage("dashboard.fxml", 774, 418);
             // Load FXML and get the controller
             FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
             Scene scene = new Scene(loader.load());
