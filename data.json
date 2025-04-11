@@ -29,22 +29,22 @@
   },
   "finances" : {
     "template-user-account_no" : {
-      "balance" : "GHC 1000",
+      "balance" : "1000",
       "time_logs" : [ ],
       "withdrawals" : [ ],
       "deposit" : [ ]
     },
     "913046" : {
-      "balance" : "GHC 0000",
-      "deposit" : [ ],
-      "time_logs" : [ ],
-      "withdrawals" : [ ]
+      "balance" : "112",
+      "deposit" : [ 343, 0, 0, 0 ],
+      "time_logs" : [ "2025-04-10 20:05:21", "2025-04-10 20:05:51", "2025-04-10 20:07:26", "2025-04-10 20:07:40" ],
+      "withdrawals" : [ 0, 21, 21, 210 ]
     },
     "340094" : {
-      "balance" : "GHC 0000",
-      "deposit" : [ ],
-      "time_logs" : [ ],
-      "withdrawals" : [ ]
+      "balance" : "4224",
+      "deposit" : [ 2112, 2112 ],
+      "time_logs" : [ "2025-04-10 19:53:31", "2025-04-10 19:54:07" ],
+      "withdrawals" : [ 0, 0 ]
     }
   },
   "Session" : {

@@ -221,6 +221,13 @@ public class model {
 
         }
 
+        public static void withdraw(String account_no , int amount) throws IOException {
+            setTimeLog(account_no);
+            setDeposit(account_no, 0);
+            setWithdraws(account_no, amount);
+            setBalanceAfterWithdraw(account_no, amount);
+
+        }
         private static String getBalance(String account_no) throws IOException {
             var finance = fetch_a_finance(account_no);
             return (String) finance.get("balance");
@@ -233,7 +240,7 @@ public class model {
             finance.put("deposit", deposits);
             var finances = fetchFinances();
             finances.put(account_no, finance);
-            save_finances(finance);
+            save_finances(finances);
         }
 
         private static void setWithdraws(String account_no, int amount) throws IOException {
@@ -259,9 +266,21 @@ public class model {
         private static void setBalanceAfterDeposit(String account_no, int amount) throws IOException {
             var finance = fetch_a_finance(account_no);
             String balance = (String) finance.get("balance");
-            balance = balance.substring(3,balance.length()-1);
+            balance = balance.substring(0,balance.length());
             int intbalance = Integer.parseInt(balance);
             intbalance += amount;
+            finance.put("balance", String.valueOf(intbalance));
+            var finances = fetchFinances();
+            finances.put(account_no, finance);
+            save_finances(finances);
+        }
+
+        private static void setBalanceAfterWithdraw(String account_no, int amount) throws IOException {
+            var finance = fetch_a_finance(account_no);
+            String balance = (String) finance.get("balance");
+            balance = balance.substring(0,balance.length());
+            int intbalance = Integer.parseInt(balance);
+            intbalance -= amount;
             finance.put("balance", String.valueOf(intbalance));
             var finances = fetchFinances();
             finances.put(account_no, finance);

@@ -64,7 +64,12 @@ public class loginController {
             System.out.println("Balance: " + balance);
 
             controller.setBankBalance(balance);
-
+            controller.setUserid(accountNo);
+            controller.setDebttoIncomeRatio();
+            controller.setTotalvaluedepo();
+            controller.settotalwithdrawn();
+            controller.setemergency();
+            controller.setLblDeposit();
             // Show new stage
             Stage stage = new Stage();
             stage.setScene(scene);

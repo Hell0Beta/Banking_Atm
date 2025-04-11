@@ -3,6 +3,7 @@ package com.example.banking_atm;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -23,10 +24,10 @@ public class WithdrawalController {
     private Button btnCancel1;
 
     @FXML
-    private Button btnWithdraw;
+    private Button btnDeposit;
 
     @FXML
-    private Button btnWithdraw1;
+    private Button btnWithdraw;
 
     @FXML
     private TextField phoneNumberField;
@@ -38,14 +39,24 @@ public class WithdrawalController {
     private PasswordField pinField1;
 
     @FXML
+    private Label userid;
+
+    @FXML
     void onCancel(ActionEvent event) {
 
     }
 
     @FXML
-    void onWithdraw(ActionEvent event) throws IOException {
-        int amount = Integer.valueOf(amountField1.getText());
-        model.FinancesTable.deposit("340094", amount);
+    void onDeposit(ActionEvent event) throws IOException {
+        model.FinancesTable.deposit(userid.getText(), Integer.parseInt(amountField1.getText()));
     }
 
+    @FXML
+    void onWithdraw(ActionEvent event) throws IOException {
+        model.FinancesTable.withdraw(userid.getText(), Integer.parseInt(amountField.getText()));
+    }
+
+    void setUserid(String id){
+        userid.setText(id);
+    }
 }
