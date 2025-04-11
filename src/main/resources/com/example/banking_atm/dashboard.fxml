@@ -68,14 +68,14 @@
                         <AnchorPane prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
                            <children>
                               <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Debt-to-Income Ratio" />
-                              <Label fx:id="lblDebtToIncomeRatio" layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label" />
+                              <Label fx:id="lblDebtToIncomeRatio" layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="5:2" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" />
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
                            <children>
                               <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Withdrawal/ month" />
-                              <Label fx:id="lblWithdrawal" layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label" />
+                              <Label fx:id="lblWithdrawal" layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="4000" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -85,13 +85,13 @@
                         <AnchorPane prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
                            <children>
                               <Text fx:id="lblTotalValueDeposited" layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Value Deposited" />
-                              <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label" />
+                              <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="2000" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" />
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 3;">
                            <Text fx:id="lblEmergencyfund" layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Fund" />
-                           <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="Label" />
+                           <Label layoutX="7.0" layoutY="17.0" prefHeight="19.0" prefWidth="66.0" text="500" />
                         </AnchorPane>
                      </children>
                   </VBox>
@@ -190,5 +190,6 @@
             </ImageView>
          </children>
       </VBox>
+      <Text fx:id="txtHiddenUser" fill="WHITE" layoutX="410.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

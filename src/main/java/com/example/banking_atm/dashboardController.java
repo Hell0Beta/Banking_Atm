@@ -22,6 +22,9 @@ public class dashboardController {
     private ImageView btnChangePin;
 
     @FXML
+    private Text txtHiddenUser;
+
+    @FXML
     private Button btnDeposit;
 
     @FXML
@@ -79,6 +82,12 @@ public class dashboardController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("deposit.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 431, 291);
 
+        DepositController controller = fxmlLoader.getController();
+        controller.setusername(txtHiddenUser.getText());
+        System.out.println(":::::::::::"+txtHiddenUser.getText());
+
+
+
         Stage stage = new Stage();
         stage.setTitle("Deposit");
         stage.setResizable(false);
@@ -120,7 +129,9 @@ public class dashboardController {
     void onWithdraw(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("withdraw.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 492, 396);
-
+        WithdrawController controller = fxmlLoader.getController();
+        controller.setUsername(txtHiddenUser.getText());
+        System.out.println(":::::::::::"+txtHiddenUser.getText());
         Stage stage = new Stage();
         stage.setTitle("Withdraw");
         stage.setResizable(false);
@@ -146,6 +157,7 @@ public class dashboardController {
 
     }
 
+
     public void setWelcomeText(String text) {
         txtWelcome.setText(text);
     }
@@ -153,4 +165,11 @@ public class dashboardController {
     public void setBankBalance(String balance) {
         lblBalance.setText(balance);
     }
+
+    public void setUserName(String userName) {
+        txtHiddenUser.setText(userName);
+    }
+
+
+    
 }

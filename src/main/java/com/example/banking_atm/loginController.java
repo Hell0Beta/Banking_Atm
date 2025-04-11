@@ -28,7 +28,7 @@ public class loginController {
     private Button signup;
 
     @FXML
-    private static TextField username;
+    private TextField username;
 
     @FXML
     void onForgot(MouseEvent event) throws IOException {
@@ -53,10 +53,11 @@ public class loginController {
 
             //HelloApplication.displaypage("dashboard.fxml", 774, 418);
             // Load FXML and get the controller
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
             Scene scene = new Scene(loader.load());
             // Get the controller and pass the welcome message
             dashboardController controller = loader.getController();
+            controller.setUserName(userinfo);
             controller.setWelcomeText("Welcome " + userinfo + "!");
 
             Map<String, Object> financeData = model.FinancesTable.fetch_a_finance(accountNo);
@@ -78,12 +79,12 @@ public class loginController {
         }
         System.out.println(userinfo);
     }
-    public static String getUserinfo(){
-        var userinfo = username.getText();
-        return userinfo.toString();
-
-
-    }
+//    public static String getUserinfo(){
+//        var userinfo = username.getText();
+//        return userinfo.toString();
+//
+//
+//    }
 
 
     @FXML

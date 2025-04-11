@@ -66,12 +66,12 @@ public class SignupController {
                 System.out.println("Balance: " + balance);
 
                 controller.setBankBalance(balance);
-                controller.setUserid(model.UserTable.fetchuserKey(name));
-                controller.setDebttoIncomeRatio();
-                controller.setTotalvaluedepo();
-                controller.settotalwithdrawn();
-                controller.setemergency();
-                controller.setLblDeposit();
+//                controller.setUserid(model.UserTable.fetchuserKey(name));
+//                controller.setDebttoIncomeRatio();
+//                controller.setTotalvaluedepo();
+//                controller.settotalwithdrawn();
+//                controller.setemergency();
+//                controller.setLblDeposit();
                 // Show new stage
                 Stage stage = new Stage();
                 stage.setScene(scene);

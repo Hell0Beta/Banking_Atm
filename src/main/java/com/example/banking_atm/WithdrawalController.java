@@ -76,12 +76,12 @@ public class WithdrawalController {
         System.out.println("Balance: " + balance);
 
         controller.setBankBalance(balance);
-        controller.setUserid(userid.getText());
-        controller.setDebttoIncomeRatio();
-        controller.setTotalvaluedepo();
-        controller.settotalwithdrawn();
-        controller.setemergency();
-        controller.setLblDeposit();
+//        controller.setUserid(userid.getText());
+//        controller.setDebttoIncomeRatio();
+//        controller.setTotalvaluedepo();
+//        controller.settotalwithdrawn();
+//        controller.setemergency();
+//        controller.setLblDeposit();
         // Show new stage
         Stage stage = new Stage();
         stage.setScene(scene);
