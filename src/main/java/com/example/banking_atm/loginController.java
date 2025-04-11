@@ -28,7 +28,7 @@ public class loginController {
     private Button signup;
 
     @FXML
-    private TextField username;
+    private static TextField username;
 
     @FXML
     void onForgot(MouseEvent event) throws IOException {
@@ -49,11 +49,11 @@ public class loginController {
             var user = model.UserTable.fetch_a_user(accountNo);
             String email = user.get("email").toString();
             String pin = user.get("PIN").toString();
-            //UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
+            UserSession.initSession(accountNo,userinfo, Integer.parseInt(pin), email);
 
             //HelloApplication.displaypage("dashboard.fxml", 774, 418);
             // Load FXML and get the controller
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
             Scene scene = new Scene(loader.load());
             // Get the controller and pass the welcome message
             dashboardController controller = loader.getController();
@@ -64,12 +64,12 @@ public class loginController {
             System.out.println("Balance: " + balance);
 
             controller.setBankBalance(balance);
-            controller.setUserid(accountNo);
-            controller.setDebttoIncomeRatio();
-            controller.setTotalvaluedepo();
-            controller.settotalwithdrawn();
-            controller.setemergency();
-            controller.setLblDeposit();
+//            controller.setUserid(accountNo);
+//            controller.setDebttoIncomeRatio();
+//            controller.setTotalvaluedepo();
+//            controller.settotalwithdrawn();
+//            controller.setemergency();
+//            controller.setLblDeposit();
             // Show new stage
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -77,6 +77,12 @@ public class loginController {
 
         }
         System.out.println(userinfo);
+    }
+    public static String getUserinfo(){
+        var userinfo = username.getText();
+        return userinfo.toString();
+
+
     }
 
 
