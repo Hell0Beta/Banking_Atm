@@ -2,15 +2,19 @@ package com.example.banking_atm;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-public class TransactionlogsController {
+public class ChangePinAuthController {
 
     @FXML
     private ImageView btnChangePin;
+
+    @FXML
+    private Button btnChangePinAuth;
 
     @FXML
     private ImageView btndashboardHome;
@@ -22,7 +26,7 @@ public class TransactionlogsController {
     private ImageView btnimgViewFinances;
 
     @FXML
-    private TableView<?> tblTransactionLogs;
+    private TextField txtEmailorPhone;
 
     @FXML
     private Text txtWelcome;
@@ -33,12 +37,12 @@ public class TransactionlogsController {
     }
 
     @FXML
-    void SortingOrder(ActionEvent event) {
+    void onChangePin(MouseEvent event) {
 
     }
 
     @FXML
-    void onChangePin(MouseEvent event) {
+    void onChangePinAuthentication(ActionEvent event) {
 
     }
 
