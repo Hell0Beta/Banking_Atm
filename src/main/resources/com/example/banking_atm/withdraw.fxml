@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="396.0" prefWidth="492.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.DepositController">
+<AnchorPane prefHeight="396.0" prefWidth="492.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banking_atm.WithdrawController">
    <children>
       <HBox layoutX="-1.0" layoutY="65.0" prefHeight="86.0" prefWidth="492.0" spacing="20.0">
          <children>
@@ -20,7 +20,7 @@
                   <Insets left="5.0" top="13.0" />
                </HBox.margin>
             </Text>
-            <TextField prefHeight="43.0" prefWidth="218.0" promptText="Enter Amount">
+            <TextField fx:id="txtAmountToWithdraw" prefHeight="43.0" prefWidth="218.0" promptText="Enter Amount">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
@@ -40,7 +40,7 @@
                   <Insets left="5.0" top="15.0" />
                </HBox.margin>
             </Text>
-            <TextField prefHeight="43.0" prefWidth="225.0" promptText="Enter Your Pin">
+            <TextField fx:id="txtPin" prefHeight="43.0" prefWidth="225.0" promptText="Enter Your Pin">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
@@ -55,17 +55,17 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="94.0" layoutY="328.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: green; -fx-border-radius: 0;" text="Withdraw" textFill="WHITE">
+      <Button fx:id="btnWithdraw" layoutX="94.0" layoutY="328.0" mnemonicParsing="false" onAction="#onWithdraw" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: green; -fx-border-radius: 0;" text="Withdraw" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="328.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: red; -fx-border-radius: 0;" text="Cancel" textFill="WHITE">
+      <Button fx:id="btnCancel" layoutX="265.0" layoutY="328.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: red; -fx-border-radius: 0;" text="Cancel" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <HBox layoutX="-2.0" layoutY="155.0" prefHeight="86.0" prefWidth="492.0" spacing="20.0">
+      <HBox layoutX="-2.0" layoutY="150.0" prefHeight="86.0" prefWidth="492.0" spacing="20.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="178.5979766845703">
                <font>
@@ -75,7 +75,7 @@
                   <Insets left="5.0" top="13.0" />
                </HBox.margin>
             </Text>
-            <TextField prefHeight="43.0" prefWidth="218.0" promptText="Enter Phone Number">
+            <TextField fx:id="txtPhoneNumber" prefHeight="43.0" prefWidth="218.0" promptText="Enter Phone Number">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
